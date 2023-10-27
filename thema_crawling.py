@@ -1,13 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import pandas as pd
-from datetime import datetime
 import time
 import os
 from tqdm import tqdm
-import re
-import mysql.connector
 import random
 
 
