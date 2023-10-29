@@ -7,16 +7,6 @@ from tqdm import tqdm
 import random
 
 
-
-
-##data 폴더 생성
-try:
-    if not os.path.exists("data"):
-        os.mkdir("data")
-except OSError:
-    print ('Error: Creating directory. ' +  "data")
-
-
 def cleand_text(text):
 
     # 별 제거
@@ -110,9 +100,15 @@ def find_thema(url):
     return tma_list
 
 
-thema_lists = {}
 
 if __name__ == "__main__":
+
+    ##data 폴더 생성
+    try:
+        if not os.path.exists("data"):
+            os.mkdir("data")
+    except OSError:
+        print ('Error: Creating directory. ' +  "data")
 
     url, txt = make_urllist()
 
